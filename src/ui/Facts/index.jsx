@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "Odometer/themes/odometer-theme-default.css";
+import "odometer/themes/odometer-theme-default.css";
 import Odometer from "react-odometerjs";
 import "./Facts.css";
 
