@@ -1,0 +1,47 @@
+#header {
+  overflow: hidden;
+  position: relative;
+}
+#header .breath__circle {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+#header .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  gap: 1rem;
+  z-index: 2;
+}
+#header .grid.upper {
+  grid-template-columns: auto 400px;
+}
+#header .discription {
+  margin-bottom: 20px;
+}
+#header .social__handles__container {
+  margin-top: 40px;
+}
+#header .profile__photo {
+  object-fit: contain;
+  filter: grayscale(100%) contrast(1.2) brightness(0.9);
+  border-radius: 0 0 5% 0;
+}
+
+/* resposiveness */
+@media (max-width: 769px) {
+  #header .grid,
+  #header .grid.upper {
+    grid-template-columns: 100%;
+  }
+  #header .grid.upper .column:first-child {
+    height: 200px;
+  }
+  #header .description {
+    text-align: center;
+  }
+  #header .social__handles__container {
+    justify-content: center;
+  }
+}

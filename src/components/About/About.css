@@ -1,0 +1,87 @@
+#perfil {
+  position: relative;
+  margin-top: 60px;
+}
+#perfil .section__wrapper {
+  display: grid;
+  grid-template-columns: 300px auto;
+  gap: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+#perfil .hole {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+#perfil .column {
+  position: relative;
+}
+#perfil .right-column {
+  padding: 100px 0px;
+}
+#perfil .skill__title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+#perfil .skill__container {
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+#perfil .skill__group {
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#perfil .skill {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 2px;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  background: rgba(var(--color-primary-rgb), 0.3);
+  box-shadow: var(--card-primary-shadow);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out;
+}
+#perfil .skill:hover {
+  z-index: 1;
+  transform: rotate(0deg) scale(2);
+}
+#perfil .skill__logo {
+  width: 30px;
+  height: 30px;
+}
+#perfil .skill__logo > img {
+  object-fit: contain;
+  filter: grayscale(100%);
+  filter: grayscale(1);
+}
+
+#perfil .card__ui-item {
+  max-width: 200px;
+  position: absolute;
+  bottom: -50px;
+  z-index: 0;
+}
+/*resposiveness*/
+
+@media (max-width: 768px) {
+  #perfil .section__wrapper {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+  #perfil .left-column {
+    padding-top: 120px;
+  }
+  #perfil .right-column {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
